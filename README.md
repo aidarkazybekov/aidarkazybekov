@@ -34,4 +34,4 @@ Full-stack business platform — Spring Boot 3 + Angular, JWT/BCrypt auth, Docke
 **Tamyr** — *in design* · a graph-database platform modeling Kyrgyz kinship as a typed multigraph (Neo4j), formalizing traditional kin naming as graph traversal.
 
 ### Connect
-[LinkedIn](https://www.linkedin.com/in/aidarkazybekov/) · [LeetCode](https://leetcode.com/u/5Yej3KAAzs/) · kmoondar@gmail.com
+[LinkedIn](https://www.linkedin.com/in/aidarkazybekov/) · [LeetCode](https://leetcode.com/u/aidarovich/) · kmoondar@gmail.com
