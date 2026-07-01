@@ -12,11 +12,11 @@
 
 ### Featured projects
 
-**iz-merch** — phygital commerce platform · *flagship, in active development*
-A limited-edition merchandise SaaS I build solo, end-to-end — Spring Boot 3 / Java 21 + PostgreSQL backend, a Next.js admin + public catalog, and a full customer reservation & order flow.
-- **Race-safe reservation engine** — a single atomic SQL `UPDATE` resolves concurrent buyers to one winner (HTTP 409), with lazy expiry (no cleanup cron).
-- **Security** — single-use hashed magic-link auth, server-side price snapshotting, Bucket4j rate limiting ahead of auth, deny-by-default.
-- **Quality** — 275 integration tests on real PostgreSQL (singleton Testcontainers), RFC 7807 errors, Flyway migrations, S3 / Cloudflare R2 storage.
+**iz-merch** — phygital commerce platform · *flagship, solo build*
+A limited-edition merch platform I'm building end-to-end: Spring Boot 3 / Java 21 + PostgreSQL backend, Next.js admin console and public catalog. Focus is production-grade backend engineering correctness under concurrency, real security, and tests that run against real infrastructure.
+- **Race-safe reservation engine** — concurrent buyers for the same unit resolve to a single winner via one atomic SQL UPDATE (losers get HTTP 409); reservation expiry is lazy, so there's no cleanup cron to babysit.
+- **Security** — single-use hashed magic-link auth, server-side price snapshotting (client can't dictate price), Bucket4j rate limiting in front of auth, deny-by-default authorization.
+- **Quality** — 275 integration tests against actual PostgreSQL (singleton Testcontainers, no H2), Flyway-versioned schema, RFC 7807 error responses, S3 / Cloudflare R2 storage.
 
 **GameBazaar** — game-items marketplace
 A full-stack marketplace with an escrow-style **order state machine** (`PENDING → PAID → DELIVERED → COMPLETED`) that rejects illegal transitions, per-order buyer/seller roles derived from the data model, and a review/reputation system. Java 21 / Spring Boot 3.5 + Spring Security (JWT) + Spring Data JPA, Next.js frontend.
